@@ -1,0 +1,19 @@
+//import parts of app here
+@import "_variables.scss";
+@import "global.scss";
+@import "utility.scss";
+
+//loading typography components
+@import "typography/heading/_.scss";
+
+//loading user components
+@import "components/header/_.scss";
+
+@import "components/hamburger/_.scss";
+
+@import "components/svg/_.scss";
+
+//loading lib components
+@import "../libs/components/menu/_.scss";
+
+

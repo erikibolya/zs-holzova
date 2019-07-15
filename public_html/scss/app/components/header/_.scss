@@ -1,0 +1,72 @@
+@import "_variables.scss";
+
+.header{
+    display: block;
+    z-index: z-index(header);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $color-secondary;
+    @include material-box-shadow($header-shadow-depth);
+}
+
+.header__top{
+    background-color: $color-terciary;
+    font-size: rem(40);
+    height: 1em;
+}
+
+.header__item{
+    display: block;
+    font-size: 0.35em;
+    color: $color-secondary;
+    text-decoration: none;
+    &:first-child{
+        margin-left: auto;
+    }
+    &:not(:last-child){
+        margin-right: 3em;
+    }
+}
+
+.header__item__svg{
+    height: 2.5em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.2em;
+}
+
+.header__item__text{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header__container{
+    @include container;
+    align-items: center;
+    height: 100%;
+}
+
+header__logo{
+    display: block;
+    width: rem(200); 
+}
+
+.header__menu{
+    margin-left: auto;
+    display: block;
+    width: 0.7em;
+    height: 0.7em;
+    cursor: pointer;
+    overflow: hidden;
+    /*border: rem(1) solid $color-terciary;*/
+    @include material-box-shadow($header-menu-depth);
+    @include border-radius(rem(4));
+    transition: box-shadow 300ms;
+    &:hover{
+        @include material-box-shadow($header-menu-depth + 3);
+    }
+
+}

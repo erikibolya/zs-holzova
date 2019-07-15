@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500i,700&display=swap');
+
+$font-sans-serif: 'Montserrat', Verdana, sans-serif;
+
+//-----z-indexes--
+$z-indexes: (
+menu: 1000,
+menu-background:10,
+menu-container: 20,
+menu-container-content:10,
+header: 500,
+);
+
+$color-primary: #333333;
+$color-primary-light: #737373;
+$color-secondary: $material-color-white;
+$color-terciary: #6db52c;

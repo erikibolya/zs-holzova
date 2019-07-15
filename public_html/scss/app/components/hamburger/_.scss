@@ -1,0 +1,28 @@
+@import "_variables.scss";
+
+.hamburger{
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger__line{
+    display: block;
+    background-color: $color-terciary;
+    width: 60%;
+    height: 10%;
+    @include border-radius(rem(4));
+    &--first{
+        margin-bottom: 10%;
+    }
+    &--second{
+        margin-bottom: 10%;
+    }
+    &--third{
+
+    }
+}

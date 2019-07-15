@@ -1,0 +1,17 @@
+@import "variables.scss";
+
+.heading{
+    font-weight: bold;
+    font-style: normal;
+    color: $heading-default-color;
+
+
+    &--center{
+        text-align: center;
+    }
+}
+@for $i from 1 through 6{
+    #{".heading--"+$i}{
+        @include heading("h"+$i);
+    }
+}

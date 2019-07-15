@@ -54,7 +54,7 @@ body {
     text-align: center; }
 
 .heading--1 {
-  font-size: calc(1.4772727273vw + 1.9545454545rem);
+  font-size: calc(1.7045454545vw + 1.7840909091rem);
   margin-top: 0;
   margin-bottom: 0.5em; }
   @media (min-width: 75em) {
@@ -62,7 +62,7 @@ body {
       font-size: 3.0625rem; } }
 
 .heading--2 {
-  font-size: calc(0.2272727273vw + 1.8295454545rem);
+  font-size: calc(0.4545454545vw + 1.6590909091rem);
   margin-top: 0;
   margin-bottom: 0.5em; }
   @media (min-width: 75em) {
@@ -78,7 +78,7 @@ body {
       font-size: 1.875rem; } }
 
 .heading--4 {
-  font-size: calc(0.2272727273vw + 1.3295454545rem);
+  font-size: calc(0.4545454545vw + 1.1590909091rem);
   margin-top: 0;
   margin-bottom: 0.5em; }
   @media (min-width: 75em) {
@@ -86,7 +86,7 @@ body {
       font-size: 1.5rem; } }
 
 .heading--5 {
-  font-size: calc(0.2272727273vw + 1.0795454545rem);
+  font-size: calc(0.4545454545vw + 0.9090909091rem);
   margin-top: 0;
   margin-bottom: 0.5em; }
   @media (min-width: 75em) {
@@ -94,7 +94,7 @@ body {
       font-size: 1.25rem; } }
 
 .heading--6 {
-  font-size: calc(0vw + 1rem);
+  font-size: calc(0.3409090909vw + 0.7443181818rem);
   margin-top: 0;
   margin-bottom: 0.5em; }
   @media (min-width: 75em) {
@@ -102,7 +102,7 @@ body {
       font-size: 1rem; } }
 
 .paragraph {
-  font-size: calc(0vw + 1rem);
+  font-size: calc(0.3409090909vw + 0.7443181818rem);
   line-height: 1.5; }
   @media (min-width: 75em) {
     .paragraph {

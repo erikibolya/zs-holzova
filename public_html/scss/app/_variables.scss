@@ -4,10 +4,13 @@ $font-sans-serif: 'Montserrat', Verdana, sans-serif;
 
 //-----z-indexes--
 $z-indexes: (
+//menu component
 menu: 1000,
 menu-background:10,
 menu-container: 20,
 menu-container-content:10,
+//!menu component
+
 header: 500,
 );
 

@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 .menu__controller{
     display: none;
     &--main{
@@ -63,7 +65,7 @@
     top: 0;
     left: 0;
     position: absolute;
-    width: rem(250);
+    width: rem($menu-width);
     height: 100vh;
     background-color: $color-secondary;
     overflow: hidden;
@@ -75,8 +77,6 @@
 }
 
 .menu__content{
-    display: flex;
-    flex-direction: column;
     top: 0;
     left: 0;
     position: absolute;
@@ -92,11 +92,20 @@
     }
 }
 
+.menu__content__wrapper{
+    display: block;
+    height: 100%;
+    width: rem($menu-width * 2);
+    overflow: auto;
+}
+
 .menu__item{
+    display: block;
+    position: relative;
+    width: rem($menu-width);
     text-decoration: none;
     color: $color-primary;
-    /*font-weight: bold;*/
-    font-size: rem(18);
+    font-size: rem($menu-font-size);
     padding: 0.7em 2.5em .7em 1em;
     cursor: pointer;
     &--submenu{

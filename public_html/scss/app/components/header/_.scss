@@ -22,19 +22,31 @@
     font-size: 0.35em;
     color: $color-secondary;
     text-decoration: none;
-    &:first-child{
-        margin-left: auto;
-    }
     &:not(:last-child){
-        margin-right: 3em;
+        margin-right: 1.5em;
     }
+
+
+    @include media($header-top-breakpoint){
+        &:first-child{
+            margin-left: auto;
+        }
+        &:not(:last-child){
+            margin-right: 3em;
+        }
+    }
+
+
 }
 
 .header__item__svg{
+    display: none;
     height: 2.5em;
-    display: inline-block;
     vertical-align: middle;
     margin-right: 0.2em;
+    @include media($header-top-breakpoint){
+       display: inline-block;
+    }
 }
 
 .header__item__text{
@@ -47,9 +59,16 @@
     @include container;
     align-items: center;
     height: 100%;
+
+    &--top{
+        justify-content: center;
+        @include media($header-top-breakpoint){
+            justify-content: flex-start;
+        }
+    }
 }
 
-header__logo{
+.header__logo{
     display: block;
     width: rem(200); 
 }

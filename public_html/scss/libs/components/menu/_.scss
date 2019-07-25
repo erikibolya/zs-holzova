@@ -22,10 +22,10 @@
                 transform: translateX(0%);
             }
             ~ .menu__content.menu__content--main{
-                transform: translateX(-100%)
+                transform: translateX(-200%)
             }
             ~ .menu__controller:checked + .menu__content.menu__content--secondary{
-                transform: translateX(-100%)
+                transform: translateX(-200%)
             }
 
         }
@@ -69,7 +69,7 @@
     height: 100vh;
     background-color: $color-secondary;
     overflow: hidden;
-    transform: translateX(-100%);
+    transform: translateX(-200%);
     @include material-box-shadow(8);
     transition-property: transform;
     transition-duration: 500ms;

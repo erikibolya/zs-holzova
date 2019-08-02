@@ -19,13 +19,15 @@
     &--secondary{
         &:checked {
             + .menu__content.menu__content--secondary{
-                transform: translateX(0%);
+                transform: translateX(0%); 
+                z-index: z-index(container-content-active, $menu-z-indexes);
             }
             ~ .menu__content.menu__content--main{
-                transform: translateX(-200%)
+                transform: translateX(-100%)
             }
             ~ .menu__controller:checked + .menu__content.menu__content--secondary{
-                transform: translateX(-200%)
+                transform: translateX(-100%);
+                z-index: z-index(container-content, $menu-z-indexes);
             }
 
         }
@@ -47,13 +49,13 @@
 }
 
 .menu__background{
-    z-index: z-index(menu-background);
+    z-index: z-index(background, $menu-z-indexes);
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: transparentize($color-primary, 0.3);
+    background-color: $menu-overlay-color;
     opacity: 0;
     transition-property: opacity;
     transition-duration: 500ms;
@@ -61,33 +63,30 @@
 }
 
 .menu__container{
-    z-index: z-index(menu-container);
+    z-index: z-index(container, $menu-z-indexes);
     top: 0;
     left: 0;
     position: absolute;
     width: rem($menu-width);
     height: 100vh;
-    background-color: $color-secondary;
+    background-color: $menu-container-background-color;
     overflow: hidden;
-    transform: translateX(-200%);
-    @include material-box-shadow(8);
+    transform: translateX(-100%);
+    @include material-box-shadow($menu-container-shadow-depth);
     transition-property: transform;
     transition-duration: 500ms;
     transition-delay: 0s;
 }
 
 .menu__content{
+    z-index: z-index(container-content, $menu-z-indexes);
     top: 0;
     left: 0;
     position: absolute;
     width: 100%;
     height: 100%;
-    transition: transform 500ms;
-    &--main{
-        z-index: z-index(menu-container-content);
-    }
+    /*transition: transform 500ms;*/
     &--secondary{
-        z-index: z-index(menu-container-content);
         transform: translateX(100%);
     }
 }
@@ -97,6 +96,9 @@
     height: 100%;
     width: rem($menu-width * 2);
     overflow: auto;
+    @if($menu-fixed-header){
+        padding-top: rem($menu-header-height);
+    }
 }
 
 .menu__item{
@@ -104,33 +106,66 @@
     position: relative;
     width: rem($menu-width);
     text-decoration: none;
-    color: $color-primary;
-    font-size: rem($menu-font-size);
-    padding: 0.7em 2.5em .7em 1em;
+    line-height: 1;
+    color: $menu-item-color;
+    background-color: $menu-item-background-color;
+    font-size: rem($menu-item-font-size);
+    padding: ($menu-item-padding-vertical*1em) (2 * $menu-item-padding-horizontal + 1em) ($menu-item-padding-vertical*1em) ($menu-item-padding-horizontal*1em);
     cursor: pointer;
+
+    @if(($menu-item-color != $menu-item-hover-color) or ($menu-item-background-color != $menu-item-hover-background-color)){
+        transition-property: color, background-color;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
+        &:hover{
+            color: $menu-item-hover-color;
+            background-color: $menu-item-hover-background-color;
+        }
+    }
+
     &--submenu{
         &::after{
             position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
             right: 1em;
             content:"\2192";
         }
     }
     &--header{
-        padding: 0 1em;
-        height: 2.4em;
+        padding: 0;
+        height: rem($menu-header-height);
+        padding: 0 (2 * $menu-item-padding-horizontal + 1em) 0 ($menu-item-padding-horizontal*1em);
         display: flex;
         justify-content: flex-end;
+        background-color: $menu-header-background-color;
+        color: $menu-header-color;
+        font-size: rem($menu-header-font-size);
+        font-style: $menu-header-font-style;
+        font-weight: $menu-header-font-weight;
         align-items: center;
         cursor: initial;
-        border-bottom: 1px solid $color-terciary;
+        @if($menu-fixed-header){
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        @if($menu-header-divider-width > 0){
+            border-bottom: rem($menu-header-divider-width) solid $menu-header-divider-color;
+        }
     }
 }
 
 .menu__breadcrumb{
-    font-weight: bold;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .menu__trigger{
+    position: absolute;
+    right: 1em;
     display: inline-block;
     cursor: pointer;
     margin-left: auto;

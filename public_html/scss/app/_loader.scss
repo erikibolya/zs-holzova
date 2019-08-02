@@ -3,19 +3,24 @@
 @import "global.scss";
 @import "utility.scss";
 
-//loading typography components
-@import "typography/heading/_.scss";
+//import variables for app components
+@import "variables/hamburger.scss";
+@import "variables/desktop-menu.scss";
+@import "variables/header.scss";
+@import "variables/svg.scss";
+@import "variables/typography/heading.scss";
+@import "variables/typography/paragraph.scss";
 
-@import "typography/paragraph/_.scss";
-
-//loading user components
-@import "components/header/_.scss";
-
-@import "components/hamburger/_.scss";
-
-@import "components/svg/_.scss";
-
-//loading lib components
+//import lib components
 @import "../libs/components/menu/_.scss";
+
+//import user components
+@import "components/hamburger.scss";
+@import "components/header.scss";
+@import "components/desktop-menu.scss";
+@import "components/svg.scss"; 
+@import "components/typography/heading.scss";
+@import "components/typography/paragraph.scss";
+
 
 

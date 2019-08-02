@@ -6,11 +6,7 @@ $font-sans-serif: 'Montserrat', Verdana, sans-serif;
 $z-indexes: (
 //menu component
 menu: 1000,
-menu-background:10,
-menu-container: 20,
-menu-container-content:10,
 //!menu component
-
 header: 500,
 );
 
@@ -18,4 +14,4 @@ $color-primary: #333333;
 $color-primary-light: #737373;
 $color-secondary: $material-color-white;
 $color-secondary-dark: #f6f6f6;
-$color-terciary: #6db52c;
+$color-terciary: #6db52c; 

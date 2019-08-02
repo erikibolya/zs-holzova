@@ -8,12 +8,21 @@
     @return $value;
 }
 
-@function z-index($name) {
-    @if map-has-key($z-indexes, $name) {
-        @return map-get($z-indexes, $name);  
+@function z-index($name, $map: null) {
+    @if ($map != null){
+        @if map-has-key($map, $name) {
+            @return map-get($map, $name);  
+        }
+        @warn "The key #{$name} is not in the map ’$z-indexes’";
+        @return null;
+    }@else{
+        @if map-has-key($z-indexes, $name) {
+            @return map-get($z-indexes, $name);  
+        }
+        @warn "The key #{$name} is not in the map ’$z-indexes’";
+        @return null;
     }
-    @warn "The key #{$name} is not in the map ’$z-indexes’";
-    @return null;
+
 };
 
 @function linear-interpolation($map,$unit:"vw") {

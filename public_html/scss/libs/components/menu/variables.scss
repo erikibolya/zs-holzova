@@ -1,2 +1,34 @@
+$menu-z-indexes: (
+background:10,
+container: 20,
+container-content:10,
+container-content-active:20,
+);
+
+
 $menu-width: 250;
-$menu-font-size: 18;
+
+$menu-overlay-color: transparentize($color-primary, 0.3);
+
+$menu-container-background-color: $color-secondary;
+$menu-container-shadow-depth: 8;
+
+$menu-header-height: 40;
+$menu-header-font-size: 18;
+$menu-header-color: $color-secondary;
+$menu-header-font-weight: bold;
+$menu-header-font-style: normal;
+$menu-header-background-color: $color-terciary;
+$menu-header-divider-color: $color-terciary;
+$menu-header-divider-width: 0;
+
+$menu-item-font-size: 18;
+$menu-item-padding-vertical: 0.61;
+$menu-item-padding-horizontal: 1;
+$menu-item-color: $color-primary;
+$menu-item-background-color: $color-secondary;
+
+$menu-item-hover-color: $color-primary;
+$menu-item-hover-background-color: $color-secondary;
+
+$menu-fixed-header: true;

@@ -1,0 +1,142 @@
+.desktop-menu{
+    position: relative;
+    display: none;
+    height: 100%;
+    align-items: center;
+    @include media($desktop-menu-breakpoint){
+        display: flex;
+    }
+}
+
+.desktop-menu__background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: $color-secondary;
+}
+
+.desktop-menu__content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: $desktop-menu-background-color;
+    align-items: stretch;
+    z-index: 10;
+}
+
+.desktop-menu__trigger{
+    display: none;
+    &:checked{
+        + .desktop-menu__item{
+            & .desktop-menu__item__link{
+                color: $desktop-menu-item-hover-color;
+                &--close{
+                    display: block;
+                }
+                &--open{
+                    display: none;
+                }
+                .desktop-menu__item__svg .svg__path{
+                    fill: $desktop-menu-item-hover-color;
+                }
+            }
+
+            + .desktop-menu__submenu{
+                transform: translateY(0);
+            }
+        }
+
+    }
+}
+
+.desktop-menu__item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include linear-interpolation-chain(font-size,$desktop-menu-font-sizes);
+
+    &:not(:last-of-type){
+        margin-right: 1.5em;
+    }
+    &--submenu{
+        padding: 0;
+
+        .desktop-menu__item__text{
+            padding: 0.5em 0;
+        }
+
+    }
+}
+
+.desktop-menu__item__svg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+    width: $desktopm-menu-item-arrow-size * 1em;
+    height: $desktopm-menu-item-arrow-size * 1em;
+
+}
+
+.desktop-menu__item__link{
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: $desktop-menu-item-color;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    width: auto;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.5em 0;
+
+    @at-root .desktop-menu__item--submenu &{
+        padding: 0.5em $desktopm-menu-item-arrow-size*1.5em 0.5em 0;
+    }
+
+
+    &--close{
+        display: none;
+    }
+
+    &:hover{
+        color: $desktop-menu-item-hover-color;
+        .desktop-menu__item__svg .svg__path{
+            fill: $desktop-menu-item-hover-color;
+        }
+    }
+}
+
+.desktop-menu__submenu{
+    width: 100%;
+    height: calc(100vh - #{rem($header-top-height)});
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include linear-interpolation-chain(padding-top, $header-bottom-heights);
+    transform: translateY(-100%);
+    transition-property: transform;
+    transition-duration: 500ms;
+    z-index: -10;
+
+}
+
+.desktop-menu__submenu__wrapper{
+    max-height: 100%;
+    background-color: $color-terciary;
+    overflow: auto;
+}
+
+
+
+
+
+
+
+

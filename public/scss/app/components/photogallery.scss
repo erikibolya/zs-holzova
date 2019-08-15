@@ -1,0 +1,26 @@
+.photogallery{
+
+}
+
+.photogallery__container{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.photogallery__scrollarea{
+    display: inline-block;
+    width: auto;
+    white-space: nowrap;
+}
+
+.photogallery__item{
+    display: inline-block;
+    width: 10em;
+    background-color: $color-terciary;
+    vertical-align: middle;
+    cursor: pointer;
+    &:not(:last-child){
+        margin-right: 1em;
+    }
+}

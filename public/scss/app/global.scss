@@ -1,0 +1,29 @@
+html{
+    font-family: $font-sans-serif;
+    min-height: 100vh;
+    font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body{ 
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: $color-primary;
+}
+
+.main{ 
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    @include linear-interpolation-chain(margin-top,$header-heights);
+}
+
+
+

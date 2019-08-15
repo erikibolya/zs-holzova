@@ -1,0 +1,71 @@
+#searcharea{
+    display: none;
+    &:checked + .searcharea{
+        transform: translateY(0); 
+    }
+}
+
+.searcharea{
+    position: fixed;
+    z-index: z-index(searchbar);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $searcharea-background-color;
+    @include linear-interpolation-chain(padding-top, $header-heights);
+    transform: translateY(-100%);
+    transition-property: transform;
+    transition-duration: 500ms;
+}
+
+
+.searcharea__wrapper{
+    @include container;
+    flex-direction: column;
+    height: 100%;
+}
+
+.searcharea__header{
+    padding: 2em 0;
+    width: 100%;
+}
+
+.searcharea__content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+
+    /* total width */
+    &::-webkit-scrollbar {
+        background-color:#fff;
+        width:16px
+    }
+
+    /* background of the scrollbar except button or resizer */
+    &::-webkit-scrollbar-track {
+        background-color:transparent;
+    }
+
+    /* scrollbar itself */
+    &::-webkit-scrollbar-thumb {
+        background-color:#babac0;
+        border-radius:16px;
+        border:5px solid #fff
+    }
+
+    /* set button(top and bottom of the scrollbar) */
+    &::-webkit-scrollbar-button {
+        display:none
+    }
+}
+
+.searcharea__item{
+    margin-bottom: 2em;
+    text-decoration: none;
+}
+
+.searcharea__item__text{
+    color: $color-primary;
+}

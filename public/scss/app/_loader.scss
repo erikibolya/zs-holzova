@@ -1,0 +1,39 @@
+//import parts of app here
+@import "_variables.scss";
+
+//import variables for app components
+@import "variables/hamburger.scss";
+@import "variables/desktop-menu.scss";
+@import "variables/header.scss";
+@import "variables/searcharea.scss";
+@import "variables/searchbar.scss";
+@import "variables/news.scss";
+@import "variables/info.scss";
+
+@import "variables/svg.scss";
+@import "variables/typography/heading.scss";
+@import "variables/typography/paragraph.scss";
+
+//import global styles
+@import "global.scss";
+@import "utility.scss";
+
+//import lib components
+@import "../libs/components/menu/_.scss";
+
+//import user components
+@import "components/hamburger.scss";
+@import "components/header.scss";
+@import "components/desktop-menu.scss";
+@import "components/searcharea.scss";
+@import "components/searchbar.scss";
+@import "components/svg.scss"; 
+@import "components/title.scss";
+@import "components/news.scss";
+@import "components/info.scss";
+@import "components/photogallery.scss";
+@import "components/typography/heading.scss";
+@import "components/typography/paragraph.scss";
+
+
+

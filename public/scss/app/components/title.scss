@@ -1,0 +1,32 @@
+.title{
+    @include heading(h2);
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.title__text{
+    font-size: inherit;
+    text-align: center;
+    margin-bottom: 0.3em;
+    margin-top: 0;
+}
+
+.title__bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title__bottom__svg{
+    width: rem(30);
+    height: rem(30);
+    margin: 0 rem(15);
+}
+
+.title__bottom__line{
+    display: block;
+    width: rem(100);
+    height: rem(2);
+    background-color: $color-primary;
+    @include border-radius(rem(100));
+}

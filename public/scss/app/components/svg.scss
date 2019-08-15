@@ -1,0 +1,81 @@
+.svg{
+
+    &__path.svg__path--text{
+        @at-root .svg--logo &{
+            fill: #66596C;
+        }
+    }
+}
+.svg__path{
+    @at-root .svg--canteen &{
+        fill: $header-top-color;
+    }
+    @at-root .svg--book &{
+        fill: $header-top-color;
+    }
+    @at-root .svg--mail &{
+        fill: $header-top-color;
+    }
+
+    @at-root .svg--search &{
+        fill: $header-top-color;
+    }
+
+    @at-root .svg--search.svg--invert &{
+        fill: $header-top-background-color;
+    }
+
+    @at-root .svg--hamburger &{
+        fill: $color-terciary;
+    }
+
+}
+
+.svg__circle{
+    @at-root .svg--search &{
+        fill: $header-top-background-color;
+    }
+}
+
+.svg--book{
+    .svg__path{
+        fill: $header-top-color;
+    }
+
+    &.info__svg .svg__path{
+        fill: $info-item-svg-color;
+    }
+}
+
+.svg--logo{ 
+    .svg__path--text{
+        fill: #66596C;
+    }
+    .svg__path--1{
+        fill:#0CACD6;
+    }
+    .svg__path--2{
+        fill:#95829C;
+    }
+    .svg__path--3{
+        fill:#ECDB00;
+    }
+    .svg__path--4{
+        fill:#7EBA28;
+    }
+}
+
+.svg--arrowdown{
+    fill: $desktop-menu-item-color;
+    &.news__button__svg{
+        fill: $news-button-color;
+    }
+}
+
+.svg--arrowup{
+    fill: $desktop-menu-item-color;
+    &.news__button__svg{
+        fill: $news-button-color;
+    }
+}
+

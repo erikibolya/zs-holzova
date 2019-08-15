@@ -1,0 +1,35 @@
+$header-logo-widths: (
+xl: 200,
+$desktop-menu-breakpoint: 140,
+s: 120
+);
+
+$header-shadow-depth: 2;
+$header-menu-depth: 2;
+
+
+$header-top-breakpoint: m;
+$header-top-height: 40;
+$header-top-background-color: $color-terciary;
+$header-top-color: $color-secondary;
+
+
+$header-bottom-background-color: $color-secondary;
+
+$header-bottom-heights: (
+xl: 100,
+$desktop-menu-breakpoint: 85,
+s: 60
+);
+
+$header-heights: (
+xl: 100 + $header-top-height,
+$desktop-menu-breakpoint: 85 + $header-top-height,
+s: 60 + $header-top-height
+);
+
+$header-heights-negative: (
+xl: (100 + $header-top-height + 20) * -1,
+$desktop-menu-breakpoint: (85 + $header-top-height + 20) * -1,
+s: (60 + $header-top-height + 20) * -1
+);

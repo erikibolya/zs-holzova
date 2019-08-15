@@ -1,0 +1,32 @@
+.searchbar{
+    display: flex;
+    border: rem(1) solid $color-terciary;
+    @include border-radius(rem($searchbar-border-radius));
+    height: $searchbar-height * 1em;
+    margin: auto;
+} 
+
+.searchbar__icon{
+    width: $searchbar-height * 1em;
+    height: $searchbar-height * 1em;
+    flex-shrink: 0;
+}
+
+.searchbar__svg{
+    display: block;
+    width: 100%;
+}
+
+.searchbar__input{
+    flex-grow: 1;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.searchbar__button{
+    background-color: $color-terciary;
+    color: $color-secondary;
+    border: none;
+    cursor: pointer;
+}

@@ -1,19 +1,44 @@
 .info{
-
-}
-
-.info__container{
     @include container;
-    justify-content: space-between;
     flex-wrap: wrap;
-
 }
 
 .info__item{
+    display: block;
     position: relative;
-    width: 22%;
     background-color: $info-item-background-color;
     border-bottom: rem(2) solid $info-item-svg-color;
+    width: 100%;
+    max-width: rem(350);
+    margin-bottom: rem(20);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media(m){
+        max-width: none;
+        margin-bottom: rem(40);
+        width: 40%;
+    }
+
+    @include media(l){
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: rem(50);
+        width: 30%;
+        &:not(:nth-of-type(3n+1)){
+            margin-left: even-margin-between(3,30);
+        }
+    }
+    @include media(xl){
+        width: 22%;
+        margin-bottom: rem(40);
+        &:not(:nth-of-type(3n+1)){
+            margin-left: 0;
+        }
+        &:not(:nth-of-type(4n+1)){
+            margin-left: even-margin-between(4,22);
+        }
+    }
 }
 
 .info__content{
@@ -30,6 +55,7 @@
 .info__image{
     width: 20%;
     margin-right: 8%;
+
 }
 
 .info__text{

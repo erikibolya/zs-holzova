@@ -1,16 +1,38 @@
 .news{
     @include container;
     flex-direction: column;
+    flex-wrap: wrap;
     @include linear-interpolation-chain(font-size, $news-font-sizes);
+    &--compact{
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .news__item{
     position: relative;
+    width: 100%;
     display: flex;
     flex-direction: column;
     background-color: $news-background-color;
     padding: 2em 2em 3em 2em;
     margin-bottom: 4em;
+
+    @at-root .news--compact &{
+        padding: $news-compact-header-height + 1em 2em 2em 2em;
+        align-items: flex-start;
+        width: 30%;
+        border-bottom: rem(2) solid $news-compact-header-color;
+    }
+}
+
+.news__heading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $news-compact-header-height;
+    width: 100%;
+    background-color: $news-compact-header-color;
 }
 
 .news__foreign-hook{
@@ -62,6 +84,14 @@
     &--less{
         display: none;
     }
+
+    @at-root .news--compact &{
+        width: auto;
+        height: auto;
+        position: relative;
+        right: 0;
+        @include border-radius(0);
+    }
 }
 
 .news__button__svg{
@@ -92,7 +122,7 @@
 .news__content{
     max-height: 4.5em;
     overflow: hidden;
-    
+
     @at-root .news__item--small &{
         max-height: none;
     }

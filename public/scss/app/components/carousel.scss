@@ -1,0 +1,20 @@
+.carousel{
+    position: relative;
+    background-color: red;
+    overflow: hidden;
+    height: calc(100vh - (3.6764705882vw + 5.5147058824rem));
+    @include media($desktop-menu-breakpoint){
+        height: calc(100vh - (5.3571428571vw + 4.4642857143rem))
+    }
+    @include media(xl){
+        height: calc(100vh - 8.75rem);
+    }
+
+}
+
+.carousel__video{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}

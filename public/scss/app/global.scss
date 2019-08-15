@@ -23,6 +23,10 @@ body{
     flex-direction: column;
     flex-grow: 1;
     @include linear-interpolation-chain(margin-top,$header-heights);
+    
+    &--homepage{
+        margin-top: 0;
+    }
 }
 
 

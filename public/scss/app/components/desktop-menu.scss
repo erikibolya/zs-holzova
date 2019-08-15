@@ -131,7 +131,39 @@
     max-height: 100%;
     background-color: $color-terciary;
     overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5em;
+    font-size: rem(15);
 }
+
+.desktop-menu__submenu__image{
+    width: 20%;
+    background-color: $color-secondary;
+}
+
+.desktop-menu__submenu__column{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.desktop-menu__submenu__item{
+    margin-bottom: 0.8em;
+    text-decoration: none;
+    color: $color-secondary;
+}
+
+.desktop-menu__submenu__group{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+
 
 
 

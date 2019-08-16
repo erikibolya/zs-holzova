@@ -9,14 +9,8 @@
 @mixin heading($size){
     @if(map-has-key($headings-sizes, $size)){
         @include fluid-font(map-get($headings-sizes,$size));
-    }@else{
-        @error "The key #{$size} is missing in the map ’$font-sizes’";  
-    }
-}
-
-@function get-font-size($size){
-    @if(map-has-key($font-sizes, $size)){
-        @return map-get($font-sizes,$size);
+        margin-top: 0;
+        margin-bottom: 0.5em;
     }@else{
         @error "The key #{$size} is missing in the map ’$font-sizes’";  
     }

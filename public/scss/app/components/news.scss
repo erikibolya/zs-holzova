@@ -2,7 +2,7 @@
     @include container;
     flex-direction: column;
     flex-wrap: wrap;
-    @include linear-interpolation-chain(font-size, $news-font-sizes);
+    @include fluid-font($news-font-size);
     &--compact{
         flex-direction: row;
         justify-content: space-between;

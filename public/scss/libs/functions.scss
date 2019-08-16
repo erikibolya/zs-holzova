@@ -59,7 +59,7 @@
 
 }
 
-@mixin linear-interpolation-chain($property, $map, $unit: "vw"){
+@mixin linear-interpolation-chain($property, $map, $stop-at-large: true, $unit: "vw"){
     @if (type-of($map) != 'map') {
         @error "linear-interpolation-chain() $map argument must be a map";
     }
@@ -78,7 +78,7 @@
         $val: map-get($newmap, $key);
 
         @if (type-of($val) == "list"){
-            @if($prev_val == null or $i == 1){
+            @if($prev_val == null or $i == 1){ 
                 @error "linear-interpolation-chain() $map at border values cannot be list";
             }@elseif(length($val) == 2){
                 $newmap: map-merge($newmap,($key : first($val)));
@@ -97,24 +97,41 @@
                     ),$unit);
 
             }@else{
-                @include media($prev_key){
-                    #{$property} : linear-interpolation((
-                        $key: $val,
-                        $prev_key: $prev_val
-                        ),$unit);
-                }    
+                @if ($unit == 'vw'){
+                    @include media($prev_key){
+                        #{$property} : linear-interpolation((
+                            $key: $val,
+                            $prev_key: $prev_val
+                            ),$unit);
+                    }
+                }@elseif ($unit == "vh"){
+                    @include media-v($prev_key){
+                        #{$property} : linear-interpolation((
+                            $key: $val,
+                            $prev_key: $prev_val
+                            ),$unit);
+                    }
+                }
+
             }
         }
         @if($remap){
             $remap: false;
             $val: map-get($newmap, $key);
-
         }
         $prev_key: $key;
         $prev_val: $val;
     }
-    @include media($prev_key){
-        #{$property} : rem($prev_val);
+    @if ($stop-at-large){
+        @if ($unit == 'vw'){
+            @include media($prev_key){
+                #{$property} : rem($prev_val);
+            } 
+        }@elseif ($unit == "vh"){
+            @include media-v($prev_key){
+                #{$property} : rem($prev_val);
+            } 
+        }
     }
 }
 

@@ -1,12 +1,14 @@
 $news-background-color: $color-secondary-dark;
 $news-name-color: $color-terciary;
 $news-date-color: $color-primary;
-$news-font-size: xs;
+$news-font-size: s;
 $news-button-background-color: $color-terciary;
 $news-button-color: $color-secondary;
 
-$news-compact-button-background-color: $color-secondary-dark;
-$news-compact-name-color: $color-secondary-dark;
-$news-compact-date-color: $color-secondary-dark;
+$news-compact-button-background-color: $color-primary;
+$news-compact-button-color: $color-secondary;
+$news-compact-name-color: $color-primary;
+$news-compact-date-color: $color-primary;
 $news-compact-header-color: $color-terciary;
-$news-compact-header-height: 2.5em;
+$news-compact-header-height: 2.8em;
+$news-compact-text-color: $color-primary-dark;

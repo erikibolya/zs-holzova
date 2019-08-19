@@ -59,6 +59,6 @@
 }
 
 .info__text{
-    @include fluid-font(xs);
+    @include fluid-font(s);
     font-weight: bold;
 }

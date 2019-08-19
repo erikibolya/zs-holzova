@@ -8,9 +8,13 @@ menu: 1000,
 header: 500,
 searchbar: 400
 );
-
-$color-primary: #333333;
-$color-primary-light: #737373;
+//primary is mainly font color
+$color-primary: #66596C;
+$color-primary-dark: #333333;
+//secondary mainly background color
 $color-secondary: $material-color-white;
 $color-secondary-dark: #f6f6f6;
-$color-terciary: #6db52c; 
+//terciary is complementary color
+$color-terciary: #7EBA28; 
+//quartenary is complementary color
+$color-quartenary: #0CACD6; 

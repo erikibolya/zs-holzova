@@ -4,8 +4,14 @@
     flex-wrap: wrap;
     @include fluid-font($news-font-size);
     &--compact{
-        flex-direction: row;
-        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        @include media(l){
+            flex-direction: row;
+        }
+        @include media(xl){
+            justify-content: space-between;
+        }
     }
 }
 
@@ -19,10 +25,29 @@
     margin-bottom: 4em;
 
     @at-root .news--compact &{
-        padding: $news-compact-header-height + 1em 2em 2em 2em;
+        padding: $news-compact-header-height + 1.5em 2em 3em 2em;
         align-items: flex-start;
-        width: 30%;
         border-bottom: rem(2) solid $news-compact-header-color;
+        width: 100%;
+
+        &:nth-of-type(n+3){
+            display: none;
+        }
+
+
+        @include media(l){
+            width: 40%;
+            margin-left: even-margin-around(2,40);
+            &:nth-of-type(n+3){
+                display: flex;
+            }
+        }
+
+
+        @include media(xl){
+            margin-left: 0;
+            width: 30%;
+        }
     }
 }
 
@@ -78,6 +103,7 @@
     width: 3.5em;
     height: 3.5em;
     background-color: $news-button-background-color;
+    text-decoration: none;
     transform: translateY(50%);
     @include border-radius(50%);
 
@@ -90,6 +116,10 @@
         height: auto;
         position: relative;
         right: 0;
+        color: $news-compact-button-color;
+        background-color: $news-compact-button-background-color;
+        padding: 0.5em 2em;
+        margin-left: auto;
         @include border-radius(0);
     }
 }
@@ -111,12 +141,23 @@
     color: $news-name-color;
     line-height: 1.3;
     margin-bottom: 0.2em;
+    font-size: 1.15em;
+    @at-root .news--compact &{
+        line-height: 1.1;
+
+        color: $news-compact-name-color;
+    }
 }
 
 .news__date{
     color: $news-date-color;
     font-weight: bold;
     margin-bottom: 0.4em;
+    @at-root .news--compact &{
+        font-size: 0.9em;
+        font-weight: normal;
+        color: $news-compact-date-color;
+    }
 }
 
 .news__content{
@@ -126,11 +167,17 @@
     @at-root .news__item--small &{
         max-height: none;
     }
+    @at-root .news--compact &{
+        margin-bottom: 1em;
+    }
 }
 
 .news__text{
     line-height: 1.5;
     &:not(:last-child){
         margin-bottom: 3em;
+    }
+    @at-root .news--compact &{
+        color: $news-compact-text-color;
     }
 }

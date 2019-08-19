@@ -1,0 +1,77 @@
+.double-pane{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.double-pane__column{
+    display: flex;
+    flex-direction: column;
+    padding-top: rem($double-pane-column-padding-top);
+    padding-bottom: rem($double-pane-column-padding-bottom);
+    width: 100%;
+
+    @include media($double-pane-column-breakpoint){
+        width: 50%;
+    }
+
+    &.double-pane__column--about{
+        background-color: $double-pane-about-background-color;
+    }
+    &.double-pane__column--swimming{
+        background-color: $double-pane-swimming-background-color;
+        color: $double-pane-swimming-color;
+    }
+}
+
+.double-pane__container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include media($double-pane-column-breakpoint){
+        max-width: rem(($layout-container-max-width-with-paddings - $layout-container-max-width)/2 + $layout-container-max-width/2);
+    }
+
+    @at-root .double-pane__column--about &{
+        margin-left: auto;
+        @include linear-interpolation-chain(padding-left,$layout-container-inner-paddings);
+        @include linear-interpolation-chain(padding-right,$double-pane-inner-paddings);
+
+    }
+    @at-root .double-pane__column--swimming &{
+        margin-right: auto;
+        @include linear-interpolation-chain(padding-right,$layout-container-inner-paddings);
+        @include linear-interpolation-chain(padding-left,$double-pane-inner-paddings);
+
+    }
+}
+
+.double-pane__heading{
+    color: inherit;
+    margin-bottom: 1.5em;
+}
+
+.double-pane__text{
+    line-height: 2;
+    margin-bottom: 4em;
+}
+
+.double-pane__link{
+    margin-top: auto;
+    text-decoration: none;
+    @include fluid-font(s);
+    padding: 0.5em 1em;
+
+
+    @at-root .double-pane__column--about &{
+        background-color: $double-pane-about-link-background-color;
+        color: $double-pane-about-link-color;
+    }
+
+    @at-root .double-pane__column--swimming &{
+        background-color: $double-pane-swimming-link-background-color;
+        color: $double-pane-swimming-link-color;
+    }
+}

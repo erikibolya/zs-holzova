@@ -32,23 +32,41 @@ ar: "min-aspect-ratio"
 //!media
 
 //fonts
+
+$font-size-base-desktop: 16;
+$font-scale-factor-desktop: 1.200;
+
+$font-size-base-mobile: 16;
+$font-scale-factor-mobile: 1.067;
+
+// Font scales cheat-sheet (source: https://type-scale.com/)
+// Minor second       1.067 
+// Major second       1.125
+// Minor third        1.200
+// Major third        1.250
+// Perfect fourth     1.333
+// Augmented fourth   1.414
+// Perfect fifht      1.500
+// Golden ratio       1.618
+
 $font-sizes:(
-xxl:(xl:49,s: 34),
-xl:(xl:32,s: 28),
-l:(xl:30,s: 26),
-m:(xl:24,s: 20),
-s:(xl:20,s: 16),
-xs:(xl:16,s: 13),
+xxxl: (xl: $font-size-base-desktop * pow($font-scale-factor-desktop,5), s: $font-size-base-mobile * pow($font-scale-factor-mobile,5)),
+xxl:  (xl: $font-size-base-desktop * pow($font-scale-factor-desktop,4), s: $font-size-base-mobile * pow($font-scale-factor-mobile,4)),
+xl:   (xl: $font-size-base-desktop * pow($font-scale-factor-desktop,3), s: $font-size-base-mobile * pow($font-scale-factor-mobile,3)),
+l:    (xl: $font-size-base-desktop * pow($font-scale-factor-desktop,2), s: $font-size-base-mobile * pow($font-scale-factor-mobile,2)),
+m:    (xl: $font-size-base-desktop * pow($font-scale-factor-desktop,1), s: $font-size-base-mobile * pow($font-scale-factor-mobile,1)),
+s:    (xl: $font-size-base-desktop, s: $font-size-base-mobile),
+xs:   (xl: $font-size-base-desktop / $font-scale-factor-desktop,s: $font-size-base-mobile / $font-scale-factor-mobile),
 );
 //!fonts
 
 //headings
 $headings-sizes:(
-h1:xxl,
-h2:xl,
-h3:l,
-h4:m,
-h5:s,
-h6:xs
+h1:xxxl,
+h2:xxl,
+h3:xl,
+h4:l,
+h5:m,
+h6:s
 );
 //!headings

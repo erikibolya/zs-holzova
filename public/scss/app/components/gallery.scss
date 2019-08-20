@@ -1,10 +1,25 @@
 .gallery{
+
+    &--compact{
+        background-color: $gallery-compact-background-color;
+    }
+}
+
+.gallery__container{
     @include container;
     flex-direction: column;
     align-items: center;
+    @at-root .gallery--compact &{
+        flex-wrap: wrap;
+        flex-direction: row;
+        @include media(xl){
+            justify-content: space-between;
+        }
+    }
 }
 
 .gallery__item{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -20,22 +35,73 @@
         max-width: none;
         flex-direction: row;
     }
+
+    @at-root .gallery--compact &{
+        flex-direction: column;
+        display: block; 
+        width: 100%;
+        margin-bottom: rem(20);
+        max-width: rem(400);
+        margin-left: auto;
+        margin-right: auto;
+
+
+        @include media($gallery-compact-breakpoint-2){
+            margin-bottom: rem(50);
+            width: 43%;
+        }
+
+        @include media($gallery-compact-breakpoint){
+            width: 32%;
+            margin-bottom: rem(40);
+        }
+
+    }
+}
+
+.gallery__image-container{
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    max-width: rem(300);
+    width: 100%;
+    margin-bottom: rem(20);
+    @include media($gallery-item-breakpoint){
+        width: rem(300);
+        max-width: none;
+        margin-right: rem(20);
+        margin-bottom: 0;
+    }
+    @at-root .gallery--compact &{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
 }
 
 .gallery__image{
-    flex-shrink: 0;
-    width: rem(300);
-    background-color: $color-secondary-dark;
-    margin-right: rem(20);
-    margin-bottom: rem(20);
-    @include media($gallery-item-breakpoint){
-        margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $color-primary-dark;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 700ms;
+    @at-root .gallery__image-container:hover &{
+        transform: scale(1.2);
     }
 }
 
 .gallery__content{
     display: flex;
     flex-direction: column;
+    @at-root .gallery--compact &{
+        width: 100%;
+        margin-top: 1em;
+    }
 }
 
 .gallery__heading{

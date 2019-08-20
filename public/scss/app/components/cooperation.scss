@@ -1,0 +1,13 @@
+.cooperation{
+    @include container;
+    overflow: hidden;
+}
+
+.cooperation__container{
+    width: 100%;
+    display: flex;
+}
+
+.cooperation__item{
+    width: rem(300);
+}

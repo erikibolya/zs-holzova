@@ -37,13 +37,23 @@
     @at-root .double-pane__column--about &{
         margin-left: auto;
         @include linear-interpolation-chain(padding-left,$layout-container-inner-paddings);
-        @include linear-interpolation-chain(padding-right,$double-pane-inner-paddings);
+        @include linear-interpolation-chain(padding-right,$layout-container-inner-paddings);
+
+        @include media($double-pane-column-breakpoint){
+            @include linear-interpolation-chain(padding-right,$double-pane-inner-paddings);
+        }
 
     }
     @at-root .double-pane__column--swimming &{
         margin-right: auto;
+        @include linear-interpolation-chain(padding-left,$layout-container-inner-paddings);
         @include linear-interpolation-chain(padding-right,$layout-container-inner-paddings);
-        @include linear-interpolation-chain(padding-left,$double-pane-inner-paddings);
+
+        @include media($double-pane-column-breakpoint){
+            @include linear-interpolation-chain(padding-left,$double-pane-inner-paddings);
+        }
+
+
 
     }
 }

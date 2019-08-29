@@ -8,6 +8,9 @@
     @include media(xl){
         height: calc(100vh - 8.75rem);
     }
+    &--small{
+        max-height: rem(500);
+    }
 
 }
 
@@ -20,4 +23,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.carousel__image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

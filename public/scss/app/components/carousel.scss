@@ -33,3 +33,24 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.carousel__content{
+    @include container;
+    position: absolute;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    color: $carousel-content-color;
+    z-index: 100;
+}
+
+.carousel__heading{
+    text-align: center;
+}
+
+.carousel__paragraph{
+    max-width: rem(500);
+}

@@ -641,7 +641,9 @@
                             <span class="title__bottom__line"></span>
                         </div>
                     </div>
-
+                    <div class="gallery__description paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
                     <a href="https://placeimg.com/500/500/any" data-w="500" data-h="500" class="gallery__item">
                         <div class="gallery__image-container">
                             <span class="gallery__image" style="background-image: url(https://placeimg.com/500/500/any)"></span>
@@ -841,58 +843,12 @@
             </div>
 
         </div>
-        <script type="text/javascript">
-            let viewports = document.querySelectorAll('.photogallery__container');
-            let pswp = document.querySelectorAll('.pswp')[0];
-            let items = document.querySelectorAll('.gallery__item');
-            let gallery = null;
 
-            for (let i = 0; i < items.length; i++) {
-                let item = items[i];
-                item.addEventListener('click', function (e) {
-                    openGallery(item);
-                    e.preventDefault();
-                });
-            }
-
-            function openGallery(item) {
-                let index = null;
-                if (gallery === null) {
-                    index = buildGallery(items, item);
-                    alert('was null');
-                }
-                if (index === null) {
-                    for (let i = 0; i < items.length; i++) {
-                        if (items[i] === item) {
-                            index = i;
-                            break;
-                        }
-                    }
-                }
-                var psw = new PhotoSwipe(pswp, PhotoSwipeUI_Default, gallery, {index: index});
-                psw.init();
-            }
-
-            function buildGallery(items, currentItem) {
-                let slides = [];
-                let index = 0;
-                for (let i = 0; i < items.length; i++) {
-                    if (items[i] === currentItem) {
-                        index = i;
-                    }
-                    slides[slides.length] = {
-                        src: items[i].getAttribute("href"),
-                        w: items[i].getAttribute("data-w"),
-                        h: items[i].getAttribute("data-h")
-                    };
-                }
-                gallery = slides;
-                return index;
-            }
-        </script>
         <!-- Core JS file -->
         <script src="public/js/photoswipe/photoswipe.min.js"></script> 
         <!-- UI JS file -->
         <script src="public/js/photoswipe/photoswipe-ui-default.min.js"></script>
+        <!-- custom scripts -->
+        <script src="public/js/gallery_detail.js"></script> 
     </body>
 </html>

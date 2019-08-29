@@ -1,21 +1,21 @@
-.photogallery{
-
-}
-
 .downloads__name{
     color: $color-terciary;
+    width: 100%;
 }
 
 .downloads__container{
     width: 100%;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     overflow: hidden;
 }
 
-.downloads__item{
-    display: block;
+.downloads__item{ 
     color: $color-primary-dark;
     font-weight:  bold;
     margin-bottom: 0.5em;
     @include fluid-font(s);
+    &:not(:last-child){
+        margin-right: 3em;
+    }
 }

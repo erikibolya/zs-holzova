@@ -58,6 +58,18 @@
     height: $news-compact-header-height;
     width: 100%;
     background-color: $news-compact-header-color;
+    overflow: hidden;
+}
+
+.news__heading__svg{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .news__foreign-hook{

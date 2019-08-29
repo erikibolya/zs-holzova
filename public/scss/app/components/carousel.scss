@@ -61,6 +61,7 @@
 .carousel__paragraph{
     max-width: rem(700);
     text-align: center;
+    line-height: 1.5;
     @include linear-interpolation-chain(font-size,(
     xl: 22,
         s:14

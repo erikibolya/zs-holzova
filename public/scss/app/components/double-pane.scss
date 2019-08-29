@@ -90,6 +90,9 @@
 .double-pane__img{
     position: absolute;
     bottom: 0;
-    @include linear-interpolation-chain(right,$layout-container-inner-paddings);
+    @include linear-interpolation-chain(right,(
+    xl: 60,
+        s: 30
+        ));
     width: 40%;
 }

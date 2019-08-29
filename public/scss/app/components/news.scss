@@ -133,6 +133,14 @@
         background-color: $news-compact-button-background-color;
         padding: 0.5em 2em;
         margin-left: auto;
+        transition-property: background-color;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
+        
+        &:hover{
+            background-color: $news-compact-button-hover-background-color;
+        }
+        
         @include border-radius(0);
     }
 }

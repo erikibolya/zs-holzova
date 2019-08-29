@@ -1,5 +1,9 @@
 .photogallery{
-
+    margin-bottom: rem(30);
+    @include fluid-font(s);
+    @at-root .widget__item &{
+        margin-bottom: 0;
+    }
 }
 
 .photogallery__container{
@@ -16,6 +20,7 @@
 
 .photogallery__name{
     color: $color-terciary;
+    font-size: 1.25em;
 }
 .photogallery__item{
     display: inline-block;

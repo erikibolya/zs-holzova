@@ -9,7 +9,7 @@
         height: calc(100vh - 8.75rem);
     }
     &--small{
-        max-height: rem(500);
+        max-height: rem(350);
     }
 
 }
@@ -49,6 +49,7 @@
 
 .carousel__heading{
     text-align: center;
+    @include fluid-font(xxxl);
 }
 
 .carousel__paragraph{

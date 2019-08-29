@@ -1,12 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 141.732 141.732" style="enable-background:new 0 0 141.732 141.732;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#7EBA02;}
-	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#7EBA02;}
-</style>
-<path class="st0" d="M98.554,81.224c0.003-0.117,0.006-0.218,0.009-0.32c0.26-8.945,0.52-17.89,0.776-26.834
+<svg class="svg svg--note" viewBox="0 0 141.732 141.732">
+    <path class="svg__path" d="M98.554,81.224c0.003-0.117,0.006-0.218,0.009-0.32c0.26-8.945,0.52-17.89,0.776-26.834
 	c0.009-0.318,0.01-0.642-0.043-0.954c-0.185-1.093-0.892-1.691-2.012-1.76c-0.764-0.047-1.487,0.142-2.21,0.346
 	c-9.056,2.554-18.112,5.106-27.168,7.659c-1.982,0.559-3.972,1.093-5.944,1.685c-1.206,0.363-2.244,1.036-3.08,1.991
 	c-0.668,0.763-0.991,1.659-1.02,2.676c-0.323,11.263-0.658,22.526-0.973,33.79c-0.071,2.548-0.833,4.86-2.23,6.973

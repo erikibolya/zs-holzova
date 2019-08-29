@@ -14,6 +14,16 @@
     margin-bottom: rem(20);
     margin-left: auto;
     margin-right: auto;
+    transition-property: background-color;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+
+    &:hover{
+        background-color: $info-item-hover-background-color;
+        .info__text{
+            color: $info-item-hover-text-color;
+        }
+    }
 
     @include media(m){
         max-width: none;
@@ -62,4 +72,8 @@
 .info__text{
     @include fluid-font(s);
     font-weight: bold;
+    color: $info-item-text-color;
+    transition-property: color;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
 }

@@ -6,8 +6,6 @@
 .double-pane__column{
     display: flex;
     flex-direction: column;
-    padding-top: rem($double-pane-column-padding-top);
-    padding-bottom: rem($double-pane-column-padding-bottom);
     width: 100%;
 
     @include media($double-pane-column-breakpoint){
@@ -24,11 +22,14 @@
 }
 
 .double-pane__container{
+    position: relative;
     display: flex;
     height: 100%;
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
+    padding-top: rem($double-pane-column-padding-top);
+    padding-bottom: rem($double-pane-column-padding-bottom);
 
     @include media($double-pane-column-breakpoint){
         max-width: rem(($layout-container-max-width-with-paddings - $layout-container-max-width)/2 + $layout-container-max-width/2);
@@ -84,4 +85,11 @@
         background-color: $double-pane-swimming-link-background-color;
         color: $double-pane-swimming-link-color;
     }
+}
+
+.double-pane__img{
+    position: absolute;
+    bottom: 0;
+    @include linear-interpolation-chain(right,$layout-container-inner-paddings);
+    width: 30%;
 }

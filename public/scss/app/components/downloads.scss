@@ -1,6 +1,15 @@
+.downloads{
+    margin-bottom: rem(30);
+    @include fluid-font(s);
+    @at-root .widget__item &{
+        margin-bottom: 0;
+    }
+}
+
 .downloads__name{
     color: $color-terciary;
     width: 100%;
+    font-size: 1.25em;
 }
 
 .downloads__container{
@@ -14,7 +23,12 @@
     color: $color-primary-dark;
     font-weight:  bold;
     margin-bottom: 0.5em;
+    text-decoration: none;
     @include fluid-font(s);
+
+    &:hover{
+        text-decoration: underline;
+    }
     &:not(:last-child){
         margin-right: 3em;
     }

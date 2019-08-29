@@ -1,18 +1,4 @@
-.svg{
-
-    &__path.svg__path--text{
-        @at-root .svg--logo &{
-            fill: #66596C;
-        }
-    }
-}
 .svg__path{
-    @at-root .svg--canteen &{
-        fill: $header-top-color;
-    }
-    @at-root .svg--book &{
-        fill: $header-top-color;
-    }
     @at-root .svg--mail &{
         fill: $header-top-color;
     }
@@ -31,19 +17,128 @@
 
 }
 
-.svg__circle{
-    @at-root .svg--search &{
-        fill: $header-top-background-color;
-    }
-}
+
 
 .svg--book{
     .svg__path{
         fill: $header-top-color;
+        transition-property: fill;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
     }
 
     &.info__svg .svg__path{
         fill: $info-item-svg-color;
+        @at-root .info__item:hover &{
+            fill: $info-item-svg-hover-color;
+        }
+    }
+}
+
+.svg--download{
+    .svg__path{
+        transition-property: fill;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
+    }
+    &.info__svg .svg__path{
+        fill: $info-item-svg-color;
+        @at-root .info__item:hover &{
+            fill: $info-item-svg-hover-color;
+        }
+    }
+}
+
+.svg--canteen{
+    .svg__path{
+        fill: $header-top-color;
+        transition-property: fill;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
+    }
+
+    &.info__svg .svg__path{
+        fill: $info-item-svg-color;
+        @at-root .info__item:hover &{
+            fill: $info-item-svg-hover-color;
+        }
+    }
+}
+
+
+.svg--bell{
+    .svg__path{
+        transition-property: fill;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
+    }
+    &.info__svg .svg__path{
+        fill: $info-item-svg-color;
+        @at-root .info__item:hover &{
+            fill: $info-item-svg-hover-color;
+        }
+    }
+}
+
+.svg--note{
+    .svg__path{
+        transition-property: fill;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
+    }
+    &.info__svg .svg__path{
+        fill: $info-item-svg-color;
+        @at-root .info__item:hover &{
+            fill: $info-item-svg-hover-color;
+        }
+    }
+}
+
+.svg--swimming{
+    .svg__path{
+        transition-property: fill;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
+    }
+    &.info__svg .svg__path{
+        fill: $info-item-svg-color;
+        @at-root .info__item:hover &{
+            fill: $info-item-svg-hover-color;
+        }
+    }
+}
+
+.svg--schoolclub{
+    .svg__path{
+        transition-property: fill;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
+    }
+    &.info__svg .svg__path{
+        fill: $info-item-svg-color;
+        @at-root .info__item:hover &{
+            fill: $info-item-svg-hover-color;
+        }
+    }
+}
+
+.svg--heart{
+    .svg__path{
+        transition-property: fill;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
+    }
+    &.info__svg .svg__path{
+        fill: $info-item-svg-color;
+        @at-root .info__item:hover &{
+            fill: $info-item-svg-hover-color;
+        }
+    }
+}
+
+.svg__circle{
+    @at-root .svg--search &{
+        fill: $header-top-background-color;
     }
 }
 
@@ -51,7 +146,7 @@
     .svg__path--text{
         fill: #66596C;
     }
-    
+
     @at-root &.footer__logo {
         .svg__path--text{
             fill: $color-secondary;

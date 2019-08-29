@@ -1,14 +1,43 @@
+.contacts{
+    margin-bottom: rem(30);
+    @include fluid-font(s);
+    @at-root .widget__item &{
+        margin-bottom: 0;
+    }
+}
+
 
 .contacts__name{
     color: $color-terciary;
     width: 100%;
+    font-size: 1.25em;
 }
 
 .contacts__container{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    overflow: hidden;
+    justify-content: space-between;
+    @at-root .contacts--page &{
+        @include container;
+        padding-bottom: rem(80);
+    }
+}
+
+.container__column{
+    width: 100%;
+    @include media(1000){
+        width: 45%;
+    }
+}
+
+.contacts__link{
+    word-break: break-all;
+    color: $color-terciary;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
 }
 
 .contacts__table{
@@ -17,41 +46,77 @@
 
 }
 
-.table{
-    border-collapse: collapse;
-    margin: 0;
-    padding: 0;
+.contacts__form{
+    @include fluid-font(s);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contacts__label{
     width: 100%;
-    table-layout: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1em;
+}
+.contacts__label__text{
+    margin-bottom: 0.5em;   
     color: $color-primary-dark;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
-.table__row {
-    display: block;
-    margin-bottom: 3em;
+.contacts__input{
+    width: 100%;
+    border: rem(1) solid #ddd;
+    padding: 0.5em;
+    outline: none;
+    transition-property: color, border-color;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
 
-    @include media(1000){
-        display: table-row;
+    &:hover,&:focus{
+        border-color: $color-terciary;
+        color: $color-terciary;
     }
 }
 
-.table__cell {
-    word-break: break-all;
-    display: block;
-    padding: .2em 0;
+.contacts__textarea{
+    width: 100%;
+    border: rem(1) solid #ddd;
+    padding: 0.5em;
+    outline: none;
+    height: rem(200);
+    resize: vertical;
 
-    &--light{
+    transition-property: color, border-color;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
 
-        color: $color-primary;
+    &:hover,&:focus{
+        border-color: $color-terciary;
+        color: $color-terciary;
     }
+}
 
+.contacts__button{
+    text-decoration: none;
+    padding: 0.5em 1em;
+    background-color: $color-terciary;
+    color: $color-secondary;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
 
-    @include media(1000){
-        display: table-cell;
-        padding: .625em 0;
-        &:not(last-child) {
-            border-bottom: rem(1) solid #ddd;
-        }
+.contacts__form__message{
+    width: 100%;
+    color: $color-terciary;
+    margin-bottom: 1em;
+    &--warning{
+        color: $material-color-orange-700;
+    }
+    &--danger{
+        color: $material-color-red-700;
     }
 }

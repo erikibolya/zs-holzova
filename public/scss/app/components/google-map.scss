@@ -1,0 +1,12 @@
+.google-map{
+    display: flex;
+    width: 100%;
+}
+
+.google-map__iframe{
+    width: 100%;
+    height: rem(500);
+    max-height: 100vh;
+    margin: 0;
+    padding: 0;
+}

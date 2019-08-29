@@ -1,0 +1,61 @@
+
+.table{
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    color: $color-primary-dark;
+    &--fixed{
+
+    }
+}
+
+.table__row {
+    display: block;
+    margin-bottom: 3em;
+
+    @include media(1000){
+        display: table-row;
+    }
+    @at-root .contacts--page &{
+        @include media(m){
+            display: table-row;
+        }
+    }
+}
+
+.table__cell {
+    display: block;
+    vertical-align: baseline;
+    padding: .2em 0;
+
+    &--light{
+        color: $color-primary;
+    }
+
+    &--bold{
+        font-weight: bold;
+    }
+
+
+    @include media(1000){
+        display: table-cell;
+        padding: .625em 0;
+        &:not(last-child) {
+            border-bottom: rem(1) solid #ddd;
+        }
+    }
+
+
+    @at-root .contacts--page &{
+        @include media(m){
+            display: table-cell;
+            padding: .625em 0;
+            &:not(last-child) {
+                border-bottom: rem(1) solid #ddd;
+            }
+        }
+    }
+
+}

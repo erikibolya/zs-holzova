@@ -1,8 +1,8 @@
 .gallery{
-
     &--compact{
         background-color: $gallery-compact-background-color;
     }
+     padding-bottom: rem(50);
 }
 
 .gallery__container{

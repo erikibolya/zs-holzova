@@ -14,6 +14,9 @@
     white-space: nowrap;
 }
 
+.photogallery__name{
+    color: $color-terciary;
+}
 .photogallery__item{
     display: inline-block;
     width: 10em;

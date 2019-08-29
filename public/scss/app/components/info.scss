@@ -1,6 +1,7 @@
 .info{
     @include container;
     flex-wrap: wrap;
+    padding-bottom: rem(50);
 }
 
 .info__item{

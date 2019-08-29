@@ -112,6 +112,7 @@
     font-size: rem($menu-item-font-size);
     padding: ($menu-item-padding-vertical*1em) (2 * $menu-item-padding-horizontal + 1em) ($menu-item-padding-vertical*1em) ($menu-item-padding-horizontal*1em);
     cursor: pointer;
+    font-weight: $menu-item-font-weight;
 
     @if(($menu-item-color != $menu-item-hover-color) or ($menu-item-background-color != $menu-item-hover-background-color)){
         transition-property: color, background-color;
@@ -129,7 +130,9 @@
             top: 50%;
             transform: translateY(-50%);
             right: 1em;
-            content:"\2192";
+            content: url(../img/naviarrow_right.svg);
+            width: 1em;
+            height: 1em;
         }
     }
     &--header{
@@ -169,6 +172,8 @@
     display: inline-block;
     cursor: pointer;
     margin-left: auto;
+    width: 1em;
+    height: 1em;
 
     &--close{
         &::after{
@@ -178,7 +183,9 @@
 
     &--back{
         &::after{
-            content:"\2190";
+            content: url(../img/naviarrow_left.svg);
+            width: 1em;
+            height: 1em;
         }
     }
 }

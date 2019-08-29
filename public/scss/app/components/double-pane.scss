@@ -91,5 +91,5 @@
     position: absolute;
     bottom: 0;
     @include linear-interpolation-chain(right,$layout-container-inner-paddings);
-    width: 30%;
+    width: 40%;
 }

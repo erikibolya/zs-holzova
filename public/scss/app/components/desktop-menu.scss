@@ -153,14 +153,27 @@
     margin-bottom: 0.8em;
     text-decoration: none;
     color: $color-secondary;
+    text-transform: uppercase;
+    &:hover{
+        text-decoration: underline;
+    }
+    
+    @at-root .desktop-menu__submenu__group &{
+        margin-bottom: 0.7em;
+        /*color: red;*/
+        text-transform: capitalize;
+        &:before{
+            /*content: "–";*/
+        }
+    }
 }
 
 .desktop-menu__submenu__group{
     display: flex;
     flex-direction: column;
-    padding-left: 1em;
-    font-size: 0.8em;
+    /*padding-left: 1em;*/
     font-weight: normal;
+    font-size: 0.85em;
 }
 
 

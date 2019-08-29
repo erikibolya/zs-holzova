@@ -29,6 +29,7 @@
         align-items: flex-start;
         border-bottom: rem(2) solid $news-compact-header-color;
         width: 100%;
+        box-shadow: rem(4) rem(5) rem(6) 0 #0000001f;
 
         &:nth-of-type(n+3){
             display: none;

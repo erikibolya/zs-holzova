@@ -127,47 +127,80 @@
 
 }
 
-.desktop-menu__submenu__wrapper{
+.desktop-menu__submenu__scrollarea{
     max-height: 100%;
-    background-color: $color-terciary;
     overflow: auto;
+    border-bottom: rem(3) solid $color-terciary;
+}
+.desktop-menu__submenu__wrapper{
     display: flex;
+    background-color: $color-secondary;
     justify-content: space-between;
-    align-items: flex-start;
-    padding: 1.5em;
+    align-items: stretch;
+    /*padding: 1.5em;*/
     font-size: rem(15);
 }
 
+
 .desktop-menu__submenu__image{
-    width: 20%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 100%;
+    display: block;
 }
 
 .desktop-menu__submenu__column{
     display: flex;
+    width: 100%;
     flex-direction: column;
-    width: 33%;
+    &--small{
+        background-color: $color-terciary;
+        width: 25%;
+        padding: rem(20);
+        flex-shrink: 0;
+        /*align-self: stretch;*/
+    }
+}
+
+.desktop-menu__submenu__divider{
+    width: rem($desktop-menu-submenu-divider-width);
+    background-color: $desktop-menu-submenu-divider-color;
+    flex-shrink: 0;
 }
 
 .desktop-menu__submenu__item{
-    margin-bottom: 1em;
+    /*margin-bottom: 1em;*/
+    padding: 0.65em 2em;
     text-decoration: none;
-    color: $color-secondary;
-    text-transform: uppercase;
+    color: $desktop-menu-submenu-item-color;
+    background-color: $desktop-menu-submenu-item-background-color;
+    text-transform: capitalize;
     font-weight: 500;
-    &:hover{
-        text-decoration: underline;
+
+    &:not(:last-child){
+        border-bottom: rem($desktop-menu-submenu-divider-width) solid $desktop-menu-submenu-divider-color;
     }
-    
+
+    &:hover{
+        background-color: $desktop-menu-submenu-item-background-hover-color;
+        color: $desktop-menu-submenu-item-hover-color;
+        border-color: $desktop-menu-submenu-item-background-hover-color;
+    }
+
     @at-root .desktop-menu__submenu__group &{
-        font-weight: normal;
-        margin-bottom: 0.7em;
+        /*font-weight: normal;*/
+        /*margin-bottom: 0.7em;*/
         /*color: red;*/
-        text-transform: capitalize;
-        &:before{
-            /*content: "–";*/
+
+        /*text-transform: capitalize;*/
+        border-color: transparent;
+        &:first-child{
+            &:hover{
+                background-color: $desktop-menu-submenu-item-background-color;
+                color: $desktop-menu-submenu-item-color;
+                border-color: transparent;
+            }
+        }
+        &:not(:first-child){
+            padding: 0.65em 2em 0.65em 3em;
         }
     }
 }
@@ -175,9 +208,13 @@
 .desktop-menu__submenu__group{
     display: flex;
     flex-direction: column;
+
     /*padding-left: 1em;*/
     font-weight: normal;
-    font-size: 0.85em;
+    /*font-size: 0.85em;*/
+    &:not(:last-child){
+        border-bottom: rem($desktop-menu-submenu-divider-width) solid $desktop-menu-submenu-divider-color;
+    }
 }
 
 

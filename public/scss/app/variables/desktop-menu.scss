@@ -8,6 +8,14 @@ $desktop-menu-breakpoint: 12
 $desktop-menu-item-color: $color-primary;
 $desktop-menu-item-hover-color: $color-primary-dark;
 
+$desktop-menu-submenu-item-color: $color-primary;
+$desktop-menu-submenu-item-hover-color: $color-secondary;
+$desktop-menu-submenu-item-background-color: $color-secondary;
+$desktop-menu-submenu-item-background-hover-color: $color-terciary;
+
+$desktop-menu-submenu-divider-color: #d3d3d3;
+$desktop-menu-submenu-divider-width: 1;
+
 $desktopm-menu-item-arrow-size: 0.9;
 
 $desktop-menu-dropdown-background-color: $color-terciary;

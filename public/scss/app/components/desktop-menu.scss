@@ -151,7 +151,9 @@
     display: flex;
     width: 100%;
     flex-direction: column;
+    border-top: rem($desktop-menu-submenu-divider-width) solid $desktop-menu-submenu-divider-color;
     &--small{
+        /*border-color: $color-terciary;*/
         background-color: $color-terciary;
         width: 25%;
         padding: rem(20);
@@ -182,7 +184,7 @@
     &:hover{
         background-color: $desktop-menu-submenu-item-background-hover-color;
         color: $desktop-menu-submenu-item-hover-color;
-        border-color: $desktop-menu-submenu-item-background-hover-color;
+        /*border-color: $desktop-menu-submenu-item-background-hover-color;*/
     }
 
     @at-root .desktop-menu__submenu__group &{

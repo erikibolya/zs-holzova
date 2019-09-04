@@ -526,7 +526,6 @@ body {
   background-color: #ffffff;
   justify-content: space-between;
   align-items: stretch;
-  /*padding: 1.5em;*/
   font-size: 0.9375rem; }
 
 .desktop-menu__submenu__image {
@@ -539,12 +538,10 @@ body {
   flex-direction: column;
   border-top: 0.0625rem solid #f2f2f2; }
   .desktop-menu__submenu__column--small {
-    /*border-color: $color-terciary;*/
     background-color: #7EBA28;
     width: 25%;
     padding: 1.25rem;
-    flex-shrink: 0;
-    /*align-self: stretch;*/ }
+    flex-shrink: 0; }
 
 .desktop-menu__submenu__divider {
   width: 0.0625rem;
@@ -552,38 +549,38 @@ body {
   flex-shrink: 0; }
 
 .desktop-menu__submenu__item {
-  /*margin-bottom: 1em;*/
   padding: 0.65em 2em;
   text-decoration: none;
-  color: #66596C;
+  cursor: pointer;
+  color: #333333;
   background-color: #ffffff;
-  text-transform: capitalize;
-  font-weight: 500; }
+  font-weight: bold; }
   .desktop-menu__submenu__item:not(:last-child) {
     border-bottom: 0.0625rem solid #f2f2f2; }
   .desktop-menu__submenu__item:hover {
     background-color: #7EBA28;
-    color: #ffffff;
-    /*border-color: $desktop-menu-submenu-item-background-hover-color;*/ }
+    color: #ffffff; }
   .desktop-menu__submenu__group .desktop-menu__submenu__item {
-    /*font-weight: normal;*/
-    /*margin-bottom: 0.7em;*/
-    /*color: red;*/
-    /*text-transform: capitalize;*/
+    font-weight: normal;
+    color: #66596C;
     border-color: transparent; }
-    .desktop-menu__submenu__group .desktop-menu__submenu__item:first-child:hover {
-      background-color: #ffffff;
-      color: #66596C;
-      border-color: transparent; }
+    .desktop-menu__submenu__group .desktop-menu__submenu__item:hover {
+      color: #ffffff; }
+    .desktop-menu__submenu__group .desktop-menu__submenu__item:first-child {
+      cursor: auto;
+      color: #333333;
+      font-weight: bold; }
+      .desktop-menu__submenu__group .desktop-menu__submenu__item:first-child:hover {
+        background-color: #ffffff;
+        color: #333333;
+        border-color: transparent; }
     .desktop-menu__submenu__group .desktop-menu__submenu__item:not(:first-child) {
       padding: 0.65em 2em 0.65em 3em; }
 
 .desktop-menu__submenu__group {
   display: flex;
   flex-direction: column;
-  /*padding-left: 1em;*/
-  font-weight: normal;
-  /*font-size: 0.85em;*/ }
+  font-weight: normal; }
   .desktop-menu__submenu__group:not(:last-child) {
     border-bottom: 0.0625rem solid #f2f2f2; }
 

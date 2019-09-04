@@ -137,7 +137,6 @@
     background-color: $color-secondary;
     justify-content: space-between;
     align-items: stretch;
-    /*padding: 1.5em;*/
     font-size: rem(15);
 }
 
@@ -153,12 +152,10 @@
     flex-direction: column;
     border-top: rem($desktop-menu-submenu-divider-width) solid $desktop-menu-submenu-divider-color;
     &--small{
-        /*border-color: $color-terciary;*/
         background-color: $color-terciary;
         width: 25%;
         padding: rem(20);
         flex-shrink: 0;
-        /*align-self: stretch;*/
     }
 }
 
@@ -169,13 +166,12 @@
 }
 
 .desktop-menu__submenu__item{
-    /*margin-bottom: 1em;*/
     padding: 0.65em 2em;
     text-decoration: none;
-    color: $desktop-menu-submenu-item-color;
+    cursor: pointer;
+    color: $color-primary-dark;;
     background-color: $desktop-menu-submenu-item-background-color;
-    text-transform: capitalize;
-    font-weight: 500;
+    font-weight: bold;
 
     &:not(:last-child){
         border-bottom: rem($desktop-menu-submenu-divider-width) solid $desktop-menu-submenu-divider-color;
@@ -184,20 +180,22 @@
     &:hover{
         background-color: $desktop-menu-submenu-item-background-hover-color;
         color: $desktop-menu-submenu-item-hover-color;
-        /*border-color: $desktop-menu-submenu-item-background-hover-color;*/
     }
 
     @at-root .desktop-menu__submenu__group &{
-        /*font-weight: normal;*/
-        /*margin-bottom: 0.7em;*/
-        /*color: red;*/
-
-        /*text-transform: capitalize;*/
+        font-weight: normal;;
+        color: $color-primary;
         border-color: transparent;
+        &:hover{
+            color: $desktop-menu-submenu-item-hover-color;
+        }
         &:first-child{
+            cursor: auto;
+            color: $color-primary-dark;
+            font-weight: bold;
             &:hover{
                 background-color: $desktop-menu-submenu-item-background-color;
-                color: $desktop-menu-submenu-item-color;
+                color: $color-primary-dark;
                 border-color: transparent;
             }
         }
@@ -210,10 +208,7 @@
 .desktop-menu__submenu__group{
     display: flex;
     flex-direction: column;
-
-    /*padding-left: 1em;*/
     font-weight: normal;
-    /*font-size: 0.85em;*/
     &:not(:last-child){
         border-bottom: rem($desktop-menu-submenu-divider-width) solid $desktop-menu-submenu-divider-color;
     }

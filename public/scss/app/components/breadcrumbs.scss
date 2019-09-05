@@ -1,0 +1,30 @@
+.breadcrumbs{
+    @include container;
+    @include fluid-font(xs);
+    align-items: center;
+    margin-top: 2em;
+    display: none;
+    @include media(l){
+        display: flex;
+    }
+}
+
+.breadcrumbs__item{
+    text-decoration: none;
+    color: $color-primary;
+    &:hover{
+        color: $color-terciary;
+    }
+    &:last-child{
+        color: $color-terciary;
+    }
+}
+
+.breadcrumbs__delimeter{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.breadcrumbs__icon{
+    width: 1em;
+}

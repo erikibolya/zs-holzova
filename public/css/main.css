@@ -1744,6 +1744,8 @@ body {
   @media (min-width: 80em) {
     .contacts__form {
       font-size: 1rem; } }
+  .contacts__form--small {
+    max-width: 28.125rem; }
 
 .contacts__label {
   width: 100%;

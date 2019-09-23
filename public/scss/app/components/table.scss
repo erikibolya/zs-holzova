@@ -59,3 +59,13 @@
     }
 
 }
+
+
+.table-scroll{
+    width: 100%;
+    overflow-y: scroll;
+
+    table{
+        width: auto;
+    }
+}

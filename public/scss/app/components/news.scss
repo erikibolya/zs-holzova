@@ -182,7 +182,7 @@
 }
 
 .news__content{
-    max-height: 4.5em;
+    height: 4.5em;
     overflow: hidden;
 
     @at-root .news__item--small &{

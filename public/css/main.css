@@ -1116,7 +1116,7 @@ body {
     color: #66596C; }
 
 .news__content {
-  max-height: 4.5em;
+  height: 4.5em;
   overflow: hidden; }
   .news__item--small .news__content {
     max-height: none; }
@@ -1403,6 +1403,7 @@ body {
   color: #66596C; }
 
 .gallery__description {
+  width: 100%;
   margin-bottom: 3em; }
 
 .pagination {
@@ -1838,6 +1839,12 @@ body {
       padding: .625em 0; }
       .contacts--page .table__cell:not(last-child) {
         border-bottom: 0.0625rem solid #ddd; } }
+
+.table-scroll {
+  width: 100%;
+  overflow-y: scroll; }
+  .table-scroll table {
+    width: auto; }
 
 .google-map {
   display: flex;

@@ -29,9 +29,9 @@
         align-items: flex-start;
         border-bottom: rem(2) solid $news-compact-header-color;
         width: 100%;
-        box-shadow: rem(4) rem(5) rem(6) 0 #0000001f;
+        box-shadow: rem(4) rem(5) rem(6) 0 rgba(0,0,0,0.121);
 
-        &:nth-of-type(n+3){
+        &:nth-of-type(n+3){ 
             display: none;
         }
 
@@ -96,7 +96,7 @@
     display: none;
     &:target{
         & ~ .news__content{
-            max-height: 9999em;
+            max-height: none;
         }
         & ~ .news__button{
             &--more{
@@ -136,11 +136,11 @@
         transition-property: background-color;
         transition-duration: 500ms;
         transition-timing-function: ease;
-        
+
         &:hover{
             background-color: $news-compact-button-hover-background-color;
         }
-        
+
         @include border-radius(0);
     }
 }
@@ -182,7 +182,7 @@
 }
 
 .news__content{
-    height: 4.5em;
+    max-height: 4.5em;
     overflow: hidden;
 
     @at-root .news__item--small &{

@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     @include fluid-font($news-font-size);
     &--compact{
-        align-items: center;
+        align-items: stretch;
         flex-direction: column;
         @include media(l){
             flex-direction: row;

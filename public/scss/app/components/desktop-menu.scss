@@ -131,6 +131,7 @@
     max-height: 100%;
     overflow: auto;
     border-bottom: rem(3) solid $color-terciary;
+    border-right: rem(3) solid $color-terciary;
 }
 .desktop-menu__submenu__wrapper{
     display: flex;

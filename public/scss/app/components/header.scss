@@ -75,8 +75,11 @@
         @include linear-interpolation-chain(height,$header-bottom-heights);
     }
 }
-
 .header__logo{
+    text-decoration: none;
+}
+
+.header__svg{
     display: block;
     @include linear-interpolation-chain(width, $header-logo-widths);
 }

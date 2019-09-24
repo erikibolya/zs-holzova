@@ -381,13 +381,16 @@ body {
         height: 6.25rem; } }
 
 .header__logo {
+  text-decoration: none; }
+
+.header__svg {
   display: block;
   width: calc(2.94118vw + 6.91176rem); }
   @media (min-width: 62.5em) {
-    .header__logo {
+    .header__svg {
       width: calc(21.42857vw - 4.64286rem); } }
   @media (min-width: 80em) {
-    .header__logo {
+    .header__svg {
       width: 12.5rem; } }
 
 .header__hamburger {
@@ -519,7 +522,8 @@ body {
 .desktop-menu__submenu__scrollarea {
   max-height: 100%;
   overflow: auto;
-  border-bottom: 0.1875rem solid #7EBA28; }
+  border-bottom: 0.1875rem solid #7EBA28;
+  border-right: 0.1875rem solid #7EBA28; }
 
 .desktop-menu__submenu__wrapper {
   display: flex;
@@ -970,7 +974,7 @@ body {
     .news {
       font-size: 1rem; } }
   .news--compact {
-    align-items: center;
+    align-items: stretch;
     flex-direction: column; }
     @media (min-width: 56.25em) {
       .news--compact {

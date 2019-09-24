@@ -443,6 +443,22 @@ body {
   align-items: stretch;
   z-index: 10; }
 
+.desktop-menu__close {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -20; }
+  .desktop-menu__close--small {
+    display: block;
+    position: absolute;
+    z-index: -5; }
+
+.desktop-menu__trigger:not(#desktop-submenu-close):checked ~ .desktop-menu__close {
+  display: block; }
+
 .desktop-menu__trigger {
   display: none; }
   .desktop-menu__trigger:checked + .desktop-menu__item .desktop-menu__item__link {

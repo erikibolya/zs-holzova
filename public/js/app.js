@@ -2,6 +2,8 @@ let pswp = document.querySelectorAll('.pswp')[0];
 let gallery_items = document.querySelectorAll('.gallery__item');
 let gallery = [];
 let viewports = document.querySelectorAll('.photogallery__container');
+let menuCheckboxes = document.querySelectorAll(".desktop-menu__trigger");
+let isMenuOpen = false;
 
 
 function openGallery(item, siblings) {

@@ -1878,7 +1878,7 @@ body {
       color: #ffffff;
       background-color: #7EBA28;
       padding: 0.5em;
-      border: 0.1875rem solid #7EBA28; }
+      border: 0.1875rem solid white; }
     .table-scroll table td {
       padding: 0.5em;
       border: 0.1875rem solid #ffffff;

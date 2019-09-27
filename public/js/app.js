@@ -87,9 +87,9 @@ searchbar.addEventListener("submit", function (e) {
         //CALLBACK FUNCTION with RESPONSE as argument
         success: function (data) {
             console.log(data);
-            e.preventDefault();
+
         }
     });
-
-}, false);
+    e.preventDefault();
+}, true);
 ``

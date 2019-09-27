@@ -29,7 +29,6 @@ function buildGallery(currentItem, siblings) {
     return index;
 }
 
-
 for (let i = 0; i < gallery_items.length; i++) {
     let item = gallery_items[i];
     item.addEventListener('click', function (e) {
@@ -71,3 +70,26 @@ for (let i = 0; i < viewports.length; i++) {
         }
     });
 }
+
+let searchbar = document.getElemendById("");
+let action = searchbar.getAttribute("action");
+let input = searchbar.querySelector(".searchbar__input");
+
+searchbar.addEventListener("submit", function (e) {
+    let value = input.value;
+    minAjax({
+        url: action, //request URL
+        type: "POST", //Request type GET/POST
+        //Send Data in form of GET/POST
+        data: {
+            query: value,
+        },
+        //CALLBACK FUNCTION with RESPONSE as argument
+        success: function (data) {
+            console.log(data);
+            e.preventDefault();
+        }
+    });
+
+}, false);
+``

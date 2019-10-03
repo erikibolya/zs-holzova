@@ -33,3 +33,12 @@
         margin-right: 3em;
     }
 }
+
+.downloads__table{
+    .table__cell{
+        width: rem(100);
+        &:first-child{
+            width: 100%;
+        }
+    }
+}

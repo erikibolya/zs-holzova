@@ -27,10 +27,11 @@
 //import global styles
 @import "global.scss";
 @import "utility.scss";
-
+ 
 //import user components
 @import "components/typography/heading.scss";
 @import "components/typography/paragraph.scss";
+@import "components/typography/ckeditor.scss";
 @import "components/hamburger.scss";
 @import "components/header.scss";
 @import "components/desktop-menu.scss";
